@@ -62,7 +62,7 @@ while True:
                 inventory[product_name_purchase] = product_quantity_purchase
             print("Account balance and inventory have been updated")
             review.append(f"{product_quantity_purchase} {product_name_purchase}(s) purchased")
-            save_inventory(file_name, inventory)  # Save inventory after purchase
+            save_inventory(file_name, inventory,account)  
         else:
             print("Account balance is not enough for this purchase")
 
@@ -77,7 +77,7 @@ while True:
                 inventory[product_name_sale] -= product_quantity_sale
                 review.append(f"{product_quantity_sale} {product_name_sale}(s) sold from inventory")
                 print("The sale process is completed")
-                save_inventory(file_name, inventory)  # Save inventory after sale
+                save_inventory(file_name, inventory,account)  
             else:
                 print("Not enough quantity available in the inventory.")
         else:
